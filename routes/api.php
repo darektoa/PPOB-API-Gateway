@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 
-
 Route::prefix('/auth')->group(function() {
-  Route::get('/login', []);
+  Route::post('/login', []);
 });

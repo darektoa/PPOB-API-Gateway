@@ -3,8 +3,8 @@
     "version": "2.2.10",
     "width": 4000,
     "height": 4000,
-    "scrollTop": -480,
-    "scrollLeft": -418,
+    "scrollTop": -401,
+    "scrollLeft": -453,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -210,9 +210,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 374.639,
-          "top": 345.4723,
-          "zIndex": 27,
+          "left": 523.389,
+          "top": 72.9723,
+          "zIndex": 12,
           "widthName": 60,
           "widthComment": 60
         },
@@ -364,9 +364,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 45.5551,
-          "top": 110.6668,
-          "zIndex": 32,
+          "left": 35.5551,
+          "top": 260.6668,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -425,10 +425,10 @@
           }
         ],
         "ui": {
-          "active": true,
-          "left": 255.75,
-          "top": 589.5,
-          "zIndex": 37,
+          "active": false,
+          "left": 525.75,
+          "top": 479.5,
+          "zIndex": 11,
           "widthName": 72.0908203125,
           "widthComment": 60
         },
@@ -452,8 +452,8 @@
           "columnIds": [
             "3d0710c6-5c6f-43f6-a374-c5753929a232"
           ],
-          "x": 434.56730703125,
-          "y": 206.6668,
+          "x": 424.56730703125,
+          "y": 308.6668,
           "direction": "right"
         },
         "end": {
@@ -461,9 +461,9 @@
           "columnIds": [
             "921af663-6060-47da-9add-7bc92d683573"
           ],
-          "x": 569.145103515625,
-          "y": 345.4723,
-          "direction": "top"
+          "x": 523.389,
+          "y": 179.22230000000002,
+          "direction": "left"
         },
         "constraintName": "fk_partners_to_users",
         "visible": true,
@@ -478,17 +478,17 @@
           "columnIds": [
             "3d0710c6-5c6f-43f6-a374-c5753929a232"
           ],
-          "x": 240.061203515625,
-          "y": 302.66679999999997,
-          "direction": "bottom"
+          "x": 424.56730703125,
+          "y": 404.6668,
+          "direction": "right"
         },
         "end": {
           "tableId": "0d2491e5-9156-4341-9149-89c07aa72b02",
           "columnIds": [
             "364d09e5-9415-491c-aff4-130bf34fbbf5"
           ],
-          "x": 255.75,
-          "y": 644.5,
+          "x": 525.75,
+          "y": 534.5,
           "direction": "left"
         },
         "constraintName": "fk_partners_to_transactions",
