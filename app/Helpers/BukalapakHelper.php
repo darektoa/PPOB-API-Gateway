@@ -14,7 +14,7 @@ class BukalapakHelper{
       'client_secret' => env('BUKALAPAK_CLIENT_SECRET'),
       'scope'         => 'public',
     ]);
-    dd($response);
-    return $response->body();
+    
+    return $response->object()->access_token;
   }
 }
