@@ -14,3 +14,10 @@ Route::get('/test', function() {
 Route::prefix('/auth')->group(function() {
   Route::post('/login', []);
 });
+
+Route::prefix('phone-credits')->group(function() {
+  Route::prefix('prepaid')->group(function() {
+    Route::get('/transactions', []);
+    Route::post('/transactions', []);
+  });
+});
