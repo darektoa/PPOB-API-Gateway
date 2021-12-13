@@ -18,6 +18,7 @@ class CreatePartnersTable extends Migration
             $table->string('name', 255);
             $table->text('api_key');
             $table->text('secret_key');
+            $table->bigInteger('balance');
             $table->timestamps();
         });
     }

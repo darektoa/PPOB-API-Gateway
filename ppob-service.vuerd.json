@@ -3,9 +3,9 @@
     "version": "2.2.10",
     "width": 4000,
     "height": 4000,
-    "scrollTop": -1454,
-    "scrollLeft": -1249,
-    "zoomLevel": 0.3,
+    "scrollTop": -973,
+    "scrollLeft": -843,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -1464,7 +1464,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 1277.9161,
           "top": 1526.1104,
           "zIndex": 41,
