@@ -15,4 +15,9 @@ class Partner extends Model
     public function users() {
         return $this->hasMany(User::class);
     }
+
+
+    public function tokens() {
+        return $this->morphMany(PersonalAccessToken::class, 'tokenable');
+    }
 }
