@@ -12,7 +12,7 @@ Route::get('/test', function() {
 });
 
 Route::prefix('/auth')->group(function() {
-  Route::post('/login', []);
+  Route::post('/token', []);
 });
 
 Route::prefix('phone-credits')->group(function() {
