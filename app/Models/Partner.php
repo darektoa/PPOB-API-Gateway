@@ -22,4 +22,9 @@ class Partner extends Authenticatable
     public function tokens() {
         return $this->morphMany(PersonalAccessToken::class, 'tokenable');
     }
+
+    
+    public function IpWhitelist() {
+        return $this->hasMany(IpWhitelist::class);
+    }
 }
