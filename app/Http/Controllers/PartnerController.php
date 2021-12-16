@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exceptions\ErrorException;
 use App\Models\Partner;
 use App\Helpers\ResponseHelper;
+use App\Http\Resources\TokenResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\{Hash, Validator};
 
@@ -33,8 +34,9 @@ class PartnerController extends Controller
 
             $token = $partner->createToken('partner_token');
             $token->accessToken->plainTextToken = $token->plainTextToken;
+            $token = $token->accessToken;
 
-            return ResponseHelper::make($token->accessToken);
+            return ResponseHelper::make(TokenResource::make($token));
         }catch(ErrorException $err) {
             return ResponseHelper::error(
                 $err->getErrors(),
