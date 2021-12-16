@@ -6,6 +6,7 @@ use App\Exceptions\ErrorException;
 use App\Models\{Partner, PersonalAccessToken};
 use App\Helpers\ResponseHelper;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\{Hash, Validator};
 
 class PartnerController extends Controller
@@ -32,8 +33,9 @@ class PartnerController extends Controller
                 throw new ErrorException('Unprocessable', ["Credential doesn't match"], 422);
 
             $token = $partner->createToken('partner_token');
+            $token->accessToken->plainTextToken = $token->plainTextToken;
 
-            return ResponseHelper::make($token->plainTextToken);
+            return ResponseHelper::make($token->accessToken);
         }catch(ErrorException $err) {
             return ResponseHelper::error(
                 $err->getErrors(),
