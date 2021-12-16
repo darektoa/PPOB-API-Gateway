@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->foreignId('product_category_id');
             $table->string('name', 100);
-            $table->string('code', 50);
+            $table->string('code', 50)->unique();
             $table->smallInteger('status')->default(1);
             $table->timestamps();
         });
