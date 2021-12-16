@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Exceptions\ErrorException;
-use App\Models\{Partner, PersonalAccessToken};
+use App\Models\Partner;
 use App\Helpers\ResponseHelper;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\{Hash, Validator};
 
 class PartnerController extends Controller
