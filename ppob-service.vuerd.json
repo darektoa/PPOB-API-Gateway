@@ -3,8 +3,8 @@
     "version": "2.2.10",
     "width": 4000,
     "height": 4000,
-    "scrollTop": -892,
-    "scrollLeft": -1970,
+    "scrollTop": -966,
+    "scrollLeft": -1837,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -1178,6 +1178,29 @@
             "id": "340af490-6f74-4d84-a461-37042376cd92"
           },
           {
+            "name": "code",
+            "comment": "",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "863c2c93-39f1-4353-b528-4c5d8391e98a"
+          },
+          {
             "name": "created_at",
             "comment": "",
             "dataType": "TIMESTAMP",
@@ -1226,9 +1249,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 2465.3926,
-          "top": 1037.2429,
-          "zIndex": 221,
+          "left": 2457.8926,
+          "top": 1028.4929,
+          "zIndex": 254,
           "widthName": 106.05712890625,
           "widthComment": 60
         },
@@ -1844,8 +1867,8 @@
           "columnIds": [
             "af3f4e3c-1517-4405-afd6-2fb95d85e52c"
           ],
-          "x": 2847.1748265625,
-          "y": 1112.7429,
+          "x": 2839.6748265625,
+          "y": 1114.2429,
           "direction": "right"
         },
         "end": {
@@ -1948,8 +1971,8 @@
           "columnIds": [
             "af3f4e3c-1517-4405-afd6-2fb95d85e52c"
           ],
-          "x": 2465.3926,
-          "y": 1112.7429,
+          "x": 2457.8926,
+          "y": 1114.2429,
           "direction": "left"
         },
         "end": {
