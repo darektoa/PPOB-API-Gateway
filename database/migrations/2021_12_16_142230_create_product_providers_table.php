@@ -16,7 +16,7 @@ class CreateProductProvidersTable extends Migration
         Schema::create('product_providers', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
-            $table->string('code', 50);
+            $table->string('code', 50)->unique();
             $table->timestamps();
         });
     }
