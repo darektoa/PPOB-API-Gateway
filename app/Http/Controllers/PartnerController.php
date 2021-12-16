@@ -26,11 +26,14 @@ class PartnerController extends Controller
             $apiKey     = $request->api_key;
             $secretKey  = $request->secret_key;
             $partner    = Partner::where('api_key', '=', $apiKey)->first();
+            $prevToken  = $partner->tokens()->first();
             
             if(!$partner)
                 throw new ErrorException('Unprocessable', ["Api key doesn't exist"], 422);
             if(!Hash::check($secretKey, $partner->secret_key))
                 throw new ErrorException('Unprocessable', ["Credential doesn't match"], 422);
+            if($prevToken)
+                $prevToken->delete();
 
             $token = $partner->createToken('partner_token');
             $token->accessToken->plainTextToken = $token->plainTextToken;
