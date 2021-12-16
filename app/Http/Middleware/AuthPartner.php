@@ -33,7 +33,7 @@ class AuthPartner
             return ResponseHelper::error(['Invalid authorization type'], 'Unauthorized', 401);
         if(!$partner)
             return ResponseHelper::error(['Invalid authorization token'], 'Unauthorized', 401);
-        if($token->created_at->diffInMinutes(now()) >= config('sanctum.expiration'))
+        if(now()->greaterThan($token->expired_at))
             return ResponseHelper::error(['Token expired'], 'Unauthorized', 401);
 
         Auth::guard('partner')->login($partner);
