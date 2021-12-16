@@ -10,7 +10,7 @@ class PersonalAccessToken extends SanctumPersonalAccessToken
 {
     use HasFactory;
 
-    protected $appends  = ['expires_in'];
+    protected $appends  = ['expired_at'];
 
     protected $guarded  = ['id'];
 
@@ -20,11 +20,11 @@ class PersonalAccessToken extends SanctumPersonalAccessToken
     }
 
 
-    public function getExpiresInAttribute() {
+    public function getExpiredAtAttribute() {
         $expiration = config('sanctum.expiration');
         $createdAt  = $this->created_at;
         $expiredAt  = $createdAt->addMinutes($expiration);
 
-        return now()->lessThan($expiredAt) ? $expiredAt->diffInSeconds() : 0;
+        return $expiredAt;
     }
 }
