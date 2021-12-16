@@ -15,7 +15,8 @@ class TokenResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'token'         => $this->token,
+            'token'         => $this->plainTextToken ?? $this->token,
+            'token_type'    => $this->token_type ?? 'Bearer',
             'expired_at'    => $this->expired_at,
             'created_at'    => $this->created_at,
             'updated_at'    => $this->updated_at,
