@@ -19,7 +19,7 @@ class CreateProviderProductsTable extends Migration
             $table->foreignId('product_provider_id');
             $table->string('name', 100);
             $table->string('code', 50)->unique();
-            $table->bigInteger('price');
+            $table->bigInteger('price')->nullable();
             $table->timestamps();
         });
     }
