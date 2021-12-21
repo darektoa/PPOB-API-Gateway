@@ -1,11 +1,11 @@
 {
   "canvas": {
-    "version": "2.2.10",
+    "version": "2.2.11",
     "width": 4000,
     "height": 4000,
-    "scrollTop": -1337,
-    "scrollLeft": -1804,
-    "zoomLevel": 0.4,
+    "scrollTop": -759,
+    "scrollLeft": -1245,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -235,7 +235,7 @@
           "active": false,
           "left": 789.7218,
           "top": 939,
-          "zIndex": 7,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
@@ -301,7 +301,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -385,6 +385,29 @@
             "id": "ab3fef05-f9c7-4ed4-b37f-74bc999a4873"
           },
           {
+            "name": "type",
+            "comment": "",
+            "dataType": "SMALLINT(6)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 81.4599609375,
+              "widthDefault": 60
+            },
+            "id": "9887ce2c-5447-4955-ad0f-4618439a0109"
+          },
+          {
             "name": "custumer",
             "comment": "",
             "dataType": "JSON",
@@ -393,7 +416,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -457,8 +480,8 @@
         "ui": {
           "active": false,
           "left": 1277.8326,
-          "top": 637.4147,
-          "zIndex": 168,
+          "top": 628.6647,
+          "zIndex": 23,
           "widthName": 72.0908203125,
           "widthComment": 60
         },
@@ -812,7 +835,7 @@
           "active": false,
           "left": 1277.8328,
           "top": 1237.9166,
-          "zIndex": 3,
+          "zIndex": 2,
           "widthName": 145.0888671875,
           "widthComment": 60
         },
@@ -989,7 +1012,7 @@
           "active": false,
           "left": 1893.4994,
           "top": 658.2477,
-          "zIndex": 249,
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1120,7 +1143,7 @@
           "active": false,
           "left": 2453.2904,
           "top": 678.7088,
-          "zIndex": 239,
+          "zIndex": 7,
           "widthName": 112.56982421875,
           "widthComment": 60
         },
@@ -1251,7 +1274,7 @@
           "active": false,
           "left": 2461.2256,
           "top": 1028.4929,
-          "zIndex": 255,
+          "zIndex": 9,
           "widthName": 106.05712890625,
           "widthComment": 60
         },
@@ -1382,7 +1405,7 @@
           "active": false,
           "left": 3013.7072,
           "top": 845.5605,
-          "zIndex": 227,
+          "zIndex": 6,
           "widthName": 154.4833984375,
           "widthComment": 60
         },
@@ -1513,7 +1536,7 @@
           "active": false,
           "left": 391.2493,
           "top": 1263.0245,
-          "zIndex": 224,
+          "zIndex": 5,
           "widthName": 72.08447265625,
           "widthComment": 60
         },
@@ -1713,7 +1736,7 @@
           "active": false,
           "left": 1896.2616,
           "top": 998.5364,
-          "zIndex": 256,
+          "zIndex": 10,
           "widthName": 106.05712890625,
           "widthComment": 60
         },
@@ -1747,7 +1770,7 @@
             "364d09e5-9415-491c-aff4-130bf34fbbf5"
           ],
           "x": 1277.8326,
-          "y": 764.1647,
+          "y": 765.6647,
           "direction": "left"
         },
         "constraintName": "fk_partners_to_transactions",
@@ -1809,7 +1832,7 @@
       {
         "identification": false,
         "relationshipType": "OneOnly",
-        "startRelationshipType": "Dash",
+        "startRelationshipType": "Ring",
         "start": {
           "tableId": "51d547b4-88f2-4a5a-b964-f6d4a50d7f1b",
           "columnIds": [
@@ -1825,7 +1848,7 @@
             "e1a419a5-ea39-4ad6-a49d-d18b0d8abd9e"
           ],
           "x": 1666.84480703125,
-          "y": 764.1647,
+          "y": 765.6647,
           "direction": "right"
         },
         "constraintName": "fk_product_codes_to_transactions",
