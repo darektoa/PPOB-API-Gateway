@@ -11,13 +11,13 @@ class ProductSeeder extends Seeder
     {
         $products = [
             [1, 'PDAM AETRA', 'PDAM-AETRA'],
-            [2, 'Telkomsel Pulsa 10.000', 'PLS-TSEL-20K'],
+            [2, 'Telkomsel Pulsa 10.000', 'PLS-TSEL-10K'],
             [2, 'Indoosat Pulsa 10.000', 'PLS-IDST-10K'],
             [2, 'Smartfren Pulsa 10.000', 'PLS-SFRN-10K'],
             [2, 'Tri Pulsa 10.000', 'PLS-TRI-10K'],
             [2, 'XL Pulsa Pulsa 10.000', 'PLS-XL-10K'],
             [3, 'PLN Postpaid', 'PLN-POST'],
-            [3, 'PLN Prepaid', 'PLN-PRE'],
+            [3, 'PLN Token 20.000', 'PLN-PRE-1'],
             [4, 'Iternet Combo 10GB/30Hari', 'PD-TSEL-1'],
             [4, 'Freedom Internet 5GB/3Hari', 'PD-IDST-1'],
             [4, 'Freedom Internet 10GB/3Hari + Bonus 1GB', 'PD-IDST-2'],
