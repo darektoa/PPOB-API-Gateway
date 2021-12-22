@@ -19,7 +19,7 @@ class PartnerSeeder extends Seeder
         $partner->tokens()->create([
             'name'      => 'auth_token',
             'abilities' => ['*'],
-            'token'     => '09d3ad6a6554a8ed428e25a53fde4ac428790df8b3c4ddfa58c6ea17f94385fa'
+            'token'     => '09d3ad6a6554a8ed428e25a53fde4ac428790df8b3c4ddfa58c6ea17f94385fa' // 1|V6UksBvgJQEKZHBTT1gVqirUm2oQI4ysiJpe3hO8
         ]);
     }
 }
