@@ -20,4 +20,9 @@ class Product extends Model
     public function providerProducts() {
         return $this->hasMany(ProviderProduct::class);
     }
+
+
+    public function transactions() {
+        return $this->hasMany(Transaction::class);
+    }
 }

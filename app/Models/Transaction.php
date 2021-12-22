@@ -15,4 +15,9 @@ class Transaction extends Model
     public function partner() {
         return $this->belongsTo(Partner::class);
     }
+
+
+    public function product() {
+        return $this->belongsTo(Product::class);
+    }
 }
