@@ -15,5 +15,6 @@ Route::middleware('auth.partner')->group(function() {
     // PRODUCT
     Route::prefix('/products')->group(function() {
         Route::get('/', [ProductController::class, 'index']);
+        Route::get('/{product:id}', [ProductController::class, 'show']);
     });
 });
