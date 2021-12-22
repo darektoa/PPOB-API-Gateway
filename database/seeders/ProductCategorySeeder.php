@@ -19,9 +19,13 @@ class ProductCategorySeeder extends Seeder
 
 
         foreach($categories as $category) {
-            ProductCategory::create([
+            $category = ProductCategory::create([
                 'name'  => $category[0],
                 'code'  => $category[1],
+            ]);
+
+            $category->setting()->create([
+                'product_provider_id'  => 1,
             ]);
         }
     }
