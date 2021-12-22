@@ -27,4 +27,9 @@ class Partner extends Authenticatable
     public function IpWhitelist() {
         return $this->hasMany(IpWhitelist::class);
     }
+
+
+    public function transactions() {
+        return $this->hasMany(Transaction::class);
+    }
 }
