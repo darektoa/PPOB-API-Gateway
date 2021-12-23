@@ -22,7 +22,7 @@ class ProductController extends Controller
         }catch(ErrorException $err) {
             return ResponseHelper::error(
                 $err->getErrors(),
-                $err->getMessage().
+                $err->getMessage(),
                 $err->getCode(),
             );
         }
