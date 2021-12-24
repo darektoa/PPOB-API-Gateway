@@ -17,4 +17,9 @@ Route::middleware('auth.partner')->group(function() {
         Route::get('/', [ProductController::class, 'index']);
         Route::get('/{product:id}', [ProductController::class, 'show']);
     });
+
+    // TRANSACTION
+    Route::prefix('/transactions')->group(function() {
+        Route::get('/', [TransactionController::class, 'index']);
+    });
 });
