@@ -316,7 +316,7 @@
             "id": "e1a419a5-ea39-4ad6-a49d-d18b0d8abd9e"
           },
           {
-            "name": "order_id",
+            "name": "partner_order_id",
             "comment": "",
             "dataType": "VARCHAR(255)",
             "default": "",
@@ -331,7 +331,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 98.1162109375,
               "widthComment": 60,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -504,7 +504,7 @@
           "active": true,
           "left": 1279.0826,
           "top": 616.1647,
-          "zIndex": 29,
+          "zIndex": 31,
           "widthName": 72.0908203125,
           "widthComment": 60
         },
