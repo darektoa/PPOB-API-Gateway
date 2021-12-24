@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\ErrorException;
+use App\Helpers\{BukalapakHelper, ResponseHelper};
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class BukalapakController extends Controller
 {
@@ -24,4 +28,23 @@ class BukalapakController extends Controller
             ->whereRelation('provider', 'code', '=', 'BKLPK')
             ->first();
     }
+
+
+    protected function phoneCredit() {
+        $BASE_URL = $this->BASE_URL;
+        $request  = $this->request;
+        $product  = $this->providerProduct;
+        $endpoint = "$BASE_URL/_partners/collecting-agents/phone-credit-prepaid/transactions";
+
+        $response = Http::withHeaders([
+            'Authorization' => BukalapakHelper::token()
+        ])->post($endpoint, [
+            'order_id'      => Str::uuid(),
+            'phone_number'  => $request->account_number,
+            'product_code'  => $product->code,
+            'amount'        => $product->price,
+        ]);
+
+        return ResponseHelper::make($response->json());
+    }    
 }
