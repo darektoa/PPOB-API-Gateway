@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index() {
-        $products = Product::all();
+        $products = Product::paginate(10);
 
-        return ResponseHelper::make($products);
+        return ResponseHelper::paginate($products);
     }
 
 
