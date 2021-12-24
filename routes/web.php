@@ -21,5 +21,6 @@ Route::middleware('auth.partner')->group(function() {
     // TRANSACTION
     Route::prefix('/transactions')->group(function() {
         Route::get('/', [TransactionController::class, 'index']);
+        Route::post('/', [TransactionController::class, 'store']);
     });
 });
