@@ -28,6 +28,14 @@ class BukalapakController extends Controller
             ->whereRelation('provider', 'code', '=', 'BKLPK')
             ->first();
     }
+    
+
+    public function run() {
+        $category = $this->product->category->code;
+
+        if($category === 'phone-credit')
+            return $this->phoneCredit();
+    }
 
 
     protected function phoneCredit() {
