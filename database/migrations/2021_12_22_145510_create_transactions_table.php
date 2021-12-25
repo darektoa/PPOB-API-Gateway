@@ -16,7 +16,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('partner_id');
-            $table->foreignId('product_id')->nullable();
+            $table->foreignId('provider_product_id')->nullable();
             $table->string('order_id');
             $table->bigInteger('amount');
             $table->smallInteger('status');
