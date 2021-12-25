@@ -20,4 +20,9 @@ class ProviderProduct extends Model
     public function provider() {
         return $this->belongsTo(ProductProvider::class, 'product_provider_id');
     }
+
+
+    public function transactions() {
+        return $this->hasMany(Transaction::class);
+    }
 }
