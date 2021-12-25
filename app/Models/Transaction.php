@@ -17,7 +17,7 @@ class Transaction extends Model
     }
 
 
-    public function product() {
-        return $this->belongsTo(Product::class);
+    public function providerProduct() {
+        return $this->belongsTo(ProviderProduct::class);
     }
 }
