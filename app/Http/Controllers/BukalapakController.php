@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exceptions\ErrorException;
 use App\Helpers\{BukalapakHelper, ResponseHelper};
+use App\Http\Resources\TransactionResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
@@ -60,7 +61,14 @@ class BukalapakController extends Controller
             if($response->clientError()) throw new ErrorException('Bad Request', [], 400);
             if($response->failed()) throw new ErrorException('Bad Gateway', [], 502);
             
-            return ResponseHelper::make($resData);
+            return ResponseHelper::make(TransactionResource::make([
+                'order_id'          => $request->order_id,
+                'account_number'    => $request->account_number,
+                'product_code'      => $product->code,
+                'product_name'      => $product->name,
+                'category'          => $product->category->name,
+                'amount'            => $resData->data->amount,
+            ]));
         }catch(ErrorException $err) {
             return ResponseHelper::error(
                 $err->getErrors(),
