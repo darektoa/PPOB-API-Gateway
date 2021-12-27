@@ -2,12 +2,17 @@
 
 namespace App\Http\Resources;
 
+use App\Traits\Resource\FlexParam;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class TransactionResource extends JsonResource
 {
+    use FlexParam;
+
     public function toArray($request)
     {
+        $this->flexParamInit();
+
         return [
             'order_id'          => $this->order_id,
             'account_number'    => $this->account_number,
