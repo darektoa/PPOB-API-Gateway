@@ -39,20 +39,34 @@ class BukalapakController extends Controller
 
 
     protected function phoneCredit() {
-        $BASE_URL = $this->BASE_URL;
-        $request  = $this->request;
-        $product  = $this->providerProduct;
-        $endpoint = "$BASE_URL/_partners/collecting-agents/phone-credit-prepaid/transactions";
+        try{
+            $BASE_URL = $this->BASE_URL;
+            $request  = $this->request;
+            $product  = $this->product;
+            $endpoint = "$BASE_URL/_partners/collecting-agents/phone-credit-prepaid/transactions";
+    
+            $response = Http::withHeaders([
+                'Authorization' => BukalapakHelper::token()
+            ])->post($endpoint, [
+                'order_id'      => Str::uuid(),
+                'phone_number'  => $request->account_number,
+                'product_code'  => $this->providerProduct->code,
+                'amount'        => $this->providerProduct->price,
+            ]);
+    
+            $resData  = $response->object();
 
-        $response = Http::withHeaders([
-            'Authorization' => BukalapakHelper::token()
-        ])->post($endpoint, [
-            'order_id'      => Str::uuid(),
-            'phone_number'  => $request->account_number,
-            'product_code'  => $product->code,
-            'amount'        => $product->price,
-        ]);
-
-        return ResponseHelper::make($response->json());
+            if($response->serverError()) throw new ErrorException('Internal Server Error', [], 500);
+            if($response->clientError()) throw new ErrorException('Bad Request', [], 400);
+            if($response->failed()) throw new ErrorException('Bad Gateway', [], 502);
+            
+            return ResponseHelper::make($resData);
+        }catch(ErrorException $err) {
+            return ResponseHelper::error(
+                $err->getErrors(),
+                $err->getMessage(),
+                $err->getCode()
+            );
+        }
     }    
 }
